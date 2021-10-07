@@ -1,4 +1,4 @@
-package com.example.entity;
+package com.example.demo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,7 +15,8 @@ import javax.persistence.UniqueConstraint;
         uniqueConstraints = { //
                 @UniqueConstraint(name = "USER_ROLE_UK", columnNames = { "User_Id", "Role_Id" }) })
 public class UserRole {
-	@Id
+
+    @Id
     @GeneratedValue
     @Column(name = "Id", nullable = false)
     private Long id;
@@ -51,4 +52,5 @@ public class UserRole {
     public void setAppRole(AppRole appRole) {
         this.appRole = appRole;
     }
+    
 }

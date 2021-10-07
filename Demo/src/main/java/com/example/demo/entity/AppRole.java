@@ -1,4 +1,4 @@
-package com.example.entity;
+package com.example.demo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,20 +8,20 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name= "App_Role",//
-		uniqueConstraints = { //
-        @UniqueConstraint(name = "APP_ROLE_UK", columnNames = "Role_Name") })
+@Table(name = "App_Role", //
+        uniqueConstraints = { //
+                @UniqueConstraint(name = "APP_ROLE_UK", columnNames = "Role_Name") })
 public class AppRole {
-	
-	@Id
+    
+    @Id
     @GeneratedValue
     @Column(name = "Role_Id", nullable = false)
     private Long roleId;
-	
-	@Column(name = "Role_Name", length = 30, nullable = false)
+
+    @Column(name = "Role_Name", length = 30, nullable = false)
     private String roleName;
-	
-	public Long getRoleId() {
+
+    public Long getRoleId() {
         return roleId;
     }
 
@@ -36,5 +36,5 @@ public class AppRole {
     public void setRoleName(String roleName) {
         this.roleName = roleName;
     }
-	
+    
 }

@@ -1,4 +1,4 @@
-package com.example.entity;
+package com.example.demo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,10 +12,8 @@ import javax.persistence.UniqueConstraint;
         uniqueConstraints = { //
                 @UniqueConstraint(name = "APP_USER_UK", columnNames = "User_Name") })
 public class AppUser {
-	
-	
-	
-	@Id
+
+    @Id
     @GeneratedValue
     @Column(name = "User_Id", nullable = false)
     private Long userId;
@@ -60,4 +58,5 @@ public class AppUser {
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
+
 }

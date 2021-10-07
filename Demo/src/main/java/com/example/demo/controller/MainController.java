@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.demo.controller;
 
 import java.security.Principal;
 
@@ -9,7 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.utils.WebUtils;
+import com.example.demo.utils.WebUtils;
 
 @Controller
 public class MainController {
@@ -78,5 +78,5 @@ public class MainController {
 
 		return "403Page";
 	}
-	
+
 }

@@ -1,4 +1,4 @@
-package com.example.dao;
+package com.example.demo.dao;
 
 import java.util.List;
 
@@ -9,13 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.entity.UserRole;
+import com.example.demo.entity.UserRole;
 
 @Repository
 @Transactional
 public class AppRoleDAO {
 
-	@Autowired
+    @Autowired
     private EntityManager entityManager;
 
     @SuppressWarnings("unchecked")
@@ -27,4 +27,5 @@ public class AppRoleDAO {
         query.setParameter("userId", userId);
         return query.getResultList();
     }
+
 }

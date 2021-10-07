@@ -1,4 +1,4 @@
-package com.example.dao;
+package com.example.demo.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -8,13 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.entity.AppUser;
+import com.example.demo.entity.AppUser;
 
 @Repository
 @Transactional
 public class AppUserDAO {
 
-	@Autowired
+    @Autowired
     private EntityManager entityManager;
 
     public AppUser findUserAccount(String userName) {
@@ -30,4 +30,5 @@ public class AppUserDAO {
             return null;
         }
     }
+
 }
